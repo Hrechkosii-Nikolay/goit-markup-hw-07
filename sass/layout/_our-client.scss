@@ -1,0 +1,31 @@
+.our-client-list {
+  display: flex;
+  gap: 30px;
+}
+
+.our-client-link {
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: calc((100% - 150px) / 6);
+
+  transition: border var(--main-transition);
+
+  &:is(:hover, :focus) {
+    border: 1px solid var(--accent-site-color);
+  }
+}
+
+.our-client-logo {
+  fill: var(--icon-color);
+  transition: fill var(--main-transition);
+
+  .our-client-link:is(:hover, :focus) & {
+    fill: var(--accent-site-color);
+  }
+}

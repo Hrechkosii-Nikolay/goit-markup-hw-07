@@ -1,0 +1,141 @@
+.footer-wrap {
+  display: flex;
+  align-items: baseline;
+}
+.footer {
+  background-color: var(--darck-background-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.footer .logo,
+.footer .address {
+  color: #fff;
+}
+
+.address .footer-contacts {
+  color: var(--footer-address-color);
+}
+.address {
+  line-height: 1.7;
+  font-style: normal;
+
+  display: inline-flex;
+}
+.address .items {
+  transition: color var(--main-transition);
+}
+.address .items:is(:hover, :focus) {
+  color: var(--accent-site-color);
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.address-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.footer-title {
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  color: var(--white-title-color);
+
+  margin-bottom: 20px;
+}
+
+.footer-address-wrapper {
+  display: inline-block;
+  margin-right: 70px;
+}
+
+/* ---icon---*/
+.footer-social-wrapper {
+  display: inline-block;
+  margin-right: 93px;
+
+  & .social-icon {
+    fill: var(--white-title-color);
+  }
+}
+
+.social-icon {
+  display: block;
+}
+
+.footer-social-icon-link {
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--footer-social-icon-bg);
+
+  transition: background-color var(--main-transition);
+
+  &:is(:hover, :focus) {
+    fill: var(--white-title-color);
+    background-color: #2196f3;
+  }
+}
+
+/**
+  |==================================
+  |             Footer-form
+  |==================================
+*/
+.footer-form {
+  display: flex;
+}
+
+.footer-input {
+  width: 358px;
+  height: 50px;
+  margin-right: 12px;
+
+  padding: 15px 16px;
+
+  color: #fff;
+
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  outline: transparent;
+}
+
+.footer-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 200px;
+  height: 50px;
+
+  background: var(--accent-site-color);
+  color: var(--white-btn-text-color);
+
+  border: transparent;
+  border-radius: 4px;
+  transition: box-shadow var(--main-transition);
+
+  &:is(:hover, :focus) {
+    box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.3);
+  }
+
+  &-text {
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+  }
+}

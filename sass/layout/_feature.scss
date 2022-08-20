@@ -1,0 +1,32 @@
+.feature__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feature__item {
+  max-width: 270px;
+}
+
+.feature__title {
+  font-size: 14px;
+  line-height: 1.172;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.feature__text {
+  line-height: 1.71;
+}
+
+/* ---icon--- */
+.feature__icon {
+  height: 120px;
+  background-color: var(--primery-background-color);
+  border-radius: 4px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 30px;
+}
