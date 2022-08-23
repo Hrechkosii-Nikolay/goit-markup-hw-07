@@ -1,10 +1,16 @@
+.our-client {
+  @include section;
+}
+
 .our-client-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
+  justify-content: center;
 }
 
 .our-client-link {
-  width: 170px;
+  width: 210px;
   height: 92px;
   border: 1px solid var(--icon-color);
   border-radius: 4px;
@@ -12,12 +18,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-basis: calc((100% - 150px) / 6);
+  flex-wrap: wrap;
 
   transition: border var(--main-transition);
 
   &:is(:hover, :focus) {
     border: 1px solid var(--accent-site-color);
+  }
+
+  @include mq(tab) {
+    width: 226px;
+  }
+
+  @include mq(desk) {
+    width: 170px;
   }
 }
 

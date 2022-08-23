@@ -1,5 +1,12 @@
 .our-work {
-  padding-top: 0;
+  @include section;
+
+  display: none;
+
+  @include mq(desk) {
+    display: block;
+    padding-top: 0;
+  }
 
   &__list {
     display: flex;

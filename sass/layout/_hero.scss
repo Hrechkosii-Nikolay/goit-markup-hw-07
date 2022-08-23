@@ -26,10 +26,20 @@
     margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
+
+    @include mq(not-desk) {
+      font-size: 26px;
+      line-height: 1.62;
+      max-width: 360px;
+    }
   }
 
   &__btn {
     width: 216px;
+
+    @include mq(mob-only) {
+      width: 200px;
+    }
 
     transition: transform var(--main-transition);
     transition: box-shadow var(--main-transition);
