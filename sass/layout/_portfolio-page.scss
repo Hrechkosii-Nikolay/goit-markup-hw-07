@@ -7,11 +7,22 @@
   | Button
   |==================================
 */
+
+.portfolio {
+  @include section;
+}
+
 .filter-buttons {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
   gap: 8px;
+
+  @include mq(mob-only) {
+    max-width: 400px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
 }
 
 .filter-bnt {
@@ -72,14 +83,38 @@
 
   border: 1px solid #e5e5e5;
   border-top: none;
+
+  @include mq(tab) {
+    flex-grow: 1;
+  }
 }
 
 .portfolio-item {
-  flex-basis: calc((100% - 60px) / 3);
+  @include mq(desk-only) {
+    width: 370px;
+  }
+  @include mq(mob-only) {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include mq(tab-only) {
+    max-width: 354px;
+  }
 }
 
 .portfolio-item-link {
   display: block;
+
+  @include mq(tab) {
+    max-width: 354px;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
 
   transition: box-shadow var(--main-transition);
 }
@@ -111,7 +146,7 @@
   height: 100%;
   background-color: var(--overlay-portfolio-color);
 
-  transform: translateY(100%);
+  transform: translateY(101%);
   transition: transform var(--main-transition);
 
   .portfolio-item-link:is(:hover, :focus) & {

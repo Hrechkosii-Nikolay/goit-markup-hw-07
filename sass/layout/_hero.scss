@@ -8,7 +8,13 @@
 
   background-color: var(--darck-background-color);
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/hero.jpg);
+    url(../images/hero@1x_mob.jpg);
+
+  @include mq(mob) {
+    @include mq(retina) {
+      background-image: url(../images/hero@2x_mob.jpg);
+    }
+  }
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -26,10 +32,20 @@
     margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
+
+    @include mq(not-desk) {
+      font-size: 26px;
+      line-height: 1.62;
+      max-width: 360px;
+    }
   }
 
   &__btn {
     width: 216px;
+
+    @include mq(mob-only) {
+      width: 200px;
+    }
 
     transition: transform var(--main-transition);
     transition: box-shadow var(--main-transition);

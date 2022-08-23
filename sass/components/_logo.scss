@@ -5,6 +5,11 @@
   line-height: 1.2;
   color: var(--header-logo-color);
 
+  @include mq(not-desk) {
+    font-size: 24px;
+    line-height: 1.16;
+  }
+
   &__accent {
     color: var(--accent-site-color);
   }

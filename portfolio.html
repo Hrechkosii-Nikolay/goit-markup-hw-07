@@ -13,6 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
@@ -21,6 +22,13 @@
         <a class="logo main-nav__logo" href="./index.html"
           ><span class="logo__accent">Web</span>Studio</a
         >
+        <!-- Burger-menu -->
+        <button class="burger-open-btn js-open-menu">
+          <svg class="mob-btn__icon" width="40" height="40">
+            <use href="./images/symbol-defs.svg#burger-menu"></use>
+          </svg>
+        </button>
+
         <ul class="site-nav">
           <li class="site-nav__item">
             <a class="site-nav__link" href="./index.html">Студия</a>
@@ -53,7 +61,7 @@
       </nav>
     </header>
     <main>
-      <section class="section">
+      <section class="section portfolio">
         <div class="container">
           <h1 class="visually-hidden">Портфолио</h1>
           <ul class="filter-buttons">
@@ -74,9 +82,7 @@
                     <p class="portfolio-item-overlay-text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                       Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
-                      приватну особу. Ресурс пропонує комплексні пропозиції з різним рівнем
-                      функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні
-                      відомості про компанію чи приватну особу.
+                      приватну особу.
                     </p>
                   </div>
                 </div>
@@ -232,6 +238,34 @@
               </a>
             </li>
           </ul>
+          <div class="burger-menu js-menu-container">
+            <button class="burger-close-btn js-close-menu" aria-expanded="false">
+              <svg class="burger-close-btn__icon" width="40" height="40">
+                <use href="./images/symbol-defs.svg#burger-menu-close"></use>
+              </svg>
+            </button>
+            <ul class="burger-menu__list">
+              <li class="butger-menu__item"><a href="">Студія</a></li>
+              <li class="butger-menu__item current-burger-page">
+                <a href="./portfolio.html">Портфоліо</a>
+              </li>
+              <li class="butger-menu__item"><a href="">Контакти</a></li>
+            </ul>
+            <ul class="burger-contacts">
+              <li class="burger-contacts__item">
+                <a href="tel:+380961111111">+38 096 111 11 11</a>
+              </li>
+              <li class="burger-contacts__item">
+                <a href="mail:info@devstudio.com">info@devstudio.com</a>
+              </li>
+            </ul>
+            <ul class="berger-social">
+              <li class="berger-social__item"><a href="">Instagram</a></li>
+              <li class="berger-social__item"><a href="">Twitter</a></li>
+              <li class="berger-social__item"><a href="">Facebook</a></li>
+              <li class="berger-social__item"><a href="">LinkedIn</a></li>
+            </ul>
+          </div>
         </div>
       </section>
     </main>
@@ -318,7 +352,7 @@
           </ul>
         </div>
         <div class="footer-form-wrap">
-          <h3 class="footer-title">присоединяйтесь</h3>
+          <h3 class="footer-title">Підпишіться на розсилку</h3>
           <form class="footer-form">
             <input class="footer-input" type="text" placeholder="E-mail" name="footer-input" />
             <button class="footer-btn" type="submit">
@@ -331,5 +365,7 @@
         </div>
       </div>
     </footer>
+    <script src="./js/burger-menu-mobile.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
